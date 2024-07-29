@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply font-body;
+}
+
+@layer components {
+  body {
+    @apply text-neutral-white bg-primary-bg-700;
+  }
+
+  section {
+    @apply mb-24;
+  }
+
+  p {
+    @apply max-w-prose;
+  }
+
+  h2 {
+    @apply text-lg font-semibold mb-4;
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 80%;
+    /* @apply m-0; */
+  }
+
+  .link {
+    @apply cursor-pointer text-sm;
+  }
+
+  .navbar {
+    @apply font-accent m-6 flex justify-between  items-center;
+
+    .logo {
+      @apply w-24;
+    }
+  }
+
+  .btn {
+    @apply bg-gradient-to-r from-accent-cyan to-accent-blue text-neutral-white font-accent font-semibold text-xl rounded-full w-64 max-w-xl py-4;
+  }
+
+  .feature {
+    @apply flex flex-col items-center mb-8;
+
+    img {
+      @apply w-20 m-12;
+    }
+    p {
+      @apply text-center;
+    }
+  }
+
+  .demo-link {
+    @apply text-accent-cyan border-b self-start;
+
+    img {
+      @apply w-4 inline;
+    }
+  }
+
+  .testimonial-card {
+    @apply relative text-sm p-4 bg-primary-bg-200 m-4 rounded-md;
+
+    blockquote {
+      @apply mb-6;
+    }
+
+    .author {
+      @apply inline-grid grid-rows-2 grid-flow-col gap-1 items-center;
+    }
+
+    img {
+      @apply w-12 mr-2 rounded-full row-span-3;
+    }
+
+    h3 {
+      @apply font-semibold col-span-2;
+    }
+
+    p {
+      @apply font-semibold row-span-2 col-span-2;
+    }
+
+    &:nth-of-type(1)::before {
+      content: url('./images/bg-quotes.png');
+      position: absolute;
+      scale: 0.4;
+      translate: -1.5rem -3.5rem;
+    }
+  }
+
+  .signup-form {
+    @apply bg-primary-bg-300 p-8 rounded-xl text-center flex flex-col items-center;
+
+    .email-input {
+      @apply text-accent-blue text-sm border-none indent-8 rounded-full w-64 max-w-xl py-4 my-6;
+      &:focus {
+        @apply outline-none;
+      }
+    }
+  }
+
+  .info-element {
+    @apply flex flex-row gap-6 mb-4 items-baseline;
+
+    .icon {
+      @apply w-auto;
+    }
+
+    p {
+      max-width: 36ch;
+      @apply grow;
+    }
+  }
+
+  .social-icon {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+      hue-rotate(214deg) brightness(104%) contrast(101%);
+    @apply w-8 h-8;
+  }
+}
