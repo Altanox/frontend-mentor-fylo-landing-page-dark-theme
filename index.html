@@ -11,7 +11,6 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
     <title>
       Frontend Mentor | Fylo landing page with dark theme and features grid
     </title>
@@ -42,7 +41,9 @@
         </p>
         <button class="btn">Get Started</button>
       </section>
-      <section class="flex flex-col">
+      <section
+        class="grid grid-flow-row md:grid-cols-2 xl:grid-cols-4 md:gap-x-12 md:gap-y-8"
+      >
         <div class="feature">
           <img
             src="./images/icon-access-anywhere.svg"
@@ -80,29 +81,31 @@
           </p>
         </div>
       </section>
-      <section class="flex flex-col">
+      <section class="flex flex-col md:flex-row md:gap-12">
         <img
-          class="mb-12 max-w-max self-center"
+          class="mb-12 max-w-[100%] self-center md:max-w-[45%] md:mb-0"
           src="/images/illustration-stay-productive.png"
           alt="people focused on one goal with their messages as text balloons"
         />
-        <h2 class="text-lg font-semibold mb-4">
-          Stay productive, wherever you are
-        </h2>
-        <pm class="mb-4">
-          Never let location be an issue when accessing your files. Fylo has you
-          covered for all of your file storage needs.
-        </pm>
-        <p class="mb-4">
-          Securely share files and folders with friends, family and colleagues
-          for live collaboration. No email attachments required.
-        </p>
-        <a href="#" class="demo-link">
-          See how Fylo works
-          <img src="./images/icon-arrow.svg" alt="right arrow"
-        /></a>
+        <div class="flex flex-col">
+          <h2 class="text-lg font-semibold mb-4 md:text-3xl">
+            Stay productive, wherever you are
+          </h2>
+          <pm class="mb-4">
+            Never let location be an issue when accessing your files. Fylo has
+            you covered for all of your file storage needs.
+          </pm>
+          <p class="mb-4">
+            Securely share files and folders with friends, family and colleagues
+            for live collaboration. No email attachments required.
+          </p>
+          <a href="#" class="demo-link">
+            See how Fylo works
+            <img src="./images/icon-arrow.svg" alt="right arrow"
+          /></a>
+        </div>
       </section>
-      <section class="flex flex-col">
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="testimonial-card">
           <blockquote>
             Fylo has improved our team productivity by an order of magnitude.
@@ -140,66 +143,84 @@
           </div>
         </div>
       </section>
-      <section>
-        <form action="post" class="signup-form">
-          <h2>Get early access today</h2>
-          <p>
+      <section class="md:min-w-[80%]">
+        <div action="post" class="signup">
+          <h2 class="md:text-2xl">Get early access today</h2>
+          <p class="mb-8">
             It only takes a minute to sign up and our free starter tier is
             extremely generous. If you have any questions, our support team
             would be happy to help you.
           </p>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="email@example.com"
-            class="email-input"
-          />
-          <button type="submit" class="btn">Get Started For Free</button>
-        </form>
-      </section>
-      <img class="logo mb-16" src="./images/logo.svg" alt="Fylo logo" />
-      <section>
-        <div class="info-element">
-          <img
-            class="icon"
-            src="./images/icon-location.svg"
-            alt="location icon"
-          />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
-          </p>
-        </div>
-        <div class="info-element">
-          <img src="./images/icon-phone.svg" alt="phone icon" />
-          <p>+1-543-123-4567</p>
-        </div>
-        <div class="info-element">
-          <img src="./images/icon-email.svg" alt="email icon" />
-          <p>example@fylo.com</p>
+          <form action="post">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="email@example.com"
+              class="email-input"
+            />
+            <button type="submit" class="btn">Get Started For Free</button>
+          </form>
         </div>
       </section>
-      <nav class="flex flex-col gap-4">
-        <p><a href="#">About Us</a></p>
-        <p><a href="#">Jobs</a></p>
-        <p><a href="#">Press</a></p>
-        <p class="mb-8"><a href="#">Blog</a></p>
-        <p><a href="#">Contact Us</a></p>
-        <p><a href="#">Terms</a></p>
-        <p><a href="#">Privacy</a></p>
-      </nav>
-      <section class="mt-24 flex justify-center gap-4">
-        <a class="social-icon" href="#" target="_blank"
-          ><img src="./images/logo-facebook.svg" alt="facebook-icon"
-        /></a>
-        <a class="social-icon" href="#" target="_blank"
-          ><img src="./images/logo-twitter.svg" alt="twitter-icon"
-        /></a>
-        <a class="social-icon" href="#" target="_blank"
-          ><img src="./images/logo-instagram.svg" alt="instagram-icon"
-        /></a>
-      </section>
+      <img
+        class="logo mb-16 md:mb-8 self-start"
+        src="./images/logo.svg"
+        alt="Fylo logo"
+      />
+      <div
+        class="wrapper min-w-full self-start flex flex-col lg:flex-row content-start gap-16 justify-between items-start"
+      >
+        <section
+          class="mb-0 grid grid-rows-1 grid-cols-1 lg:grid-rows-2 lg:grid-cols-2 gap-x-8 gap-y-2"
+        >
+          <div class="info-element lg:row-span-3 min-w-[70%]">
+            <img
+              class="icon"
+              src="./images/icon-location.svg"
+              alt="location icon"
+            />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
+          </div>
+          <div class="info-element">
+            <img src="./images/icon-phone.svg" alt="phone icon" />
+            <p>+1-543-123-4567</p>
+          </div>
+          <div class="info-element">
+            <img src="./images/icon-email.svg" alt="email icon" />
+            <p>example@fylo.com</p>
+          </div>
+        </section>
+        <nav class="flex flex-col gap-14 self-start md:flex-row">
+          <div class="flex flex-col gap-4">
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Jobs</a></p>
+            <p><a href="#">Press</a></p>
+            <p><a href="#">Blog</a></p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <p><a href="#">Contact Us</a></p>
+            <p><a href="#">Terms</a></p>
+            <p><a href="#">Privacy</a></p>
+          </div>
+        </nav>
+        <section
+          class="mb-24 flex justify-center gap-4 sm:self-center lg:self-start"
+        >
+          <a class="social-icon" href="#" target="_blank"
+            ><img src="./images/logo-facebook.svg" alt="facebook-icon"
+          /></a>
+          <a class="social-icon" href="#" target="_blank"
+            ><img src="./images/logo-twitter.svg" alt="twitter-icon"
+          /></a>
+          <a class="social-icon" href="#" target="_blank"
+            ><img src="./images/logo-instagram.svg" alt="instagram-icon"
+          /></a>
+        </section>
+      </div>
     </div>
   </body>
 </html>

@@ -10,7 +10,7 @@
 
 @layer components {
   body {
-    @apply text-neutral-white bg-primary-bg-700;
+    @apply text-neutral-white bg-primary-bg-500;
   }
 
   section {
@@ -26,9 +26,9 @@
   }
 
   .container {
+    @apply flex flex-col justify-center items-center;
     margin: 0 auto;
     max-width: 80%;
-    /* @apply m-0; */
   }
 
   .link {
@@ -44,16 +44,18 @@
   }
 
   .btn {
-    @apply bg-gradient-to-r from-accent-cyan to-accent-blue text-neutral-white font-accent font-semibold text-xl rounded-full w-64 max-w-xl py-4;
+    @apply bg-gradient-to-r from-accent-cyan to-accent-blue text-neutral-white font-accent font-semibold text-lg rounded-full px-12 min-h-14;
   }
 
   .feature {
     @apply flex flex-col items-center mb-8;
 
     img {
-      @apply w-20 m-12;
+      @apply h-20 m-12;
     }
-    p {
+
+    p,
+    h2 {
       @apply text-center;
     }
   }
@@ -67,7 +69,7 @@
   }
 
   .testimonial-card {
-    @apply relative text-sm p-4 bg-primary-bg-200 m-4 rounded-md;
+    @apply relative text-sm p-4 bg-primary-bg-200 rounded-md;
 
     blockquote {
       @apply mb-6;
@@ -97,11 +99,15 @@
     }
   }
 
-  .signup-form {
-    @apply bg-primary-bg-300 p-8 rounded-xl text-center flex flex-col items-center;
+  .signup {
+    @apply bg-primary-bg-300 px-12 py-8 rounded-xl text-center flex flex-col items-center;
+
+    form {
+      @apply grid grid-cols-1 md:grid-flow-col gap-8 items-center justify-center min-w-full;
+    }
 
     .email-input {
-      @apply text-accent-blue text-sm border-none indent-8 rounded-full w-64 max-w-xl py-4 my-6;
+      @apply text-accent-blue text-sm border-none indent-8 rounded-full min-w-full min-h-14 py-4;
       &:focus {
         @apply outline-none;
       }
@@ -109,7 +115,7 @@
   }
 
   .info-element {
-    @apply flex flex-row gap-6 mb-4 items-baseline;
+    @apply flex flex-row gap-6 items-baseline;
 
     .icon {
       @apply w-auto;
