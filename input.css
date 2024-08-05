@@ -10,11 +10,12 @@
 
 @layer components {
   body {
-    @apply text-neutral-white bg-primary-bg-500;
+    color: #fff;
+    background-color: hsl(217 28% 15%);
   }
 
   section {
-    @apply mb-24;
+    @apply pb-24;
   }
 
   p {
@@ -25,8 +26,14 @@
     @apply text-lg font-semibold mb-4;
   }
 
+  .hero {
+    background: url(./images/bg-curvy-desktop.svg), hsl(217 28% 15%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+
   .container {
-    @apply flex flex-col justify-center items-center;
     margin: 0 auto;
     max-width: 80%;
   }
@@ -112,6 +119,14 @@
         @apply outline-none;
       }
     }
+  }
+
+  .form {
+    background-image: linear-gradient(
+      to bottom,
+      hsl(218, 28%, 13%) 0 40%,
+      hsl(216 53% 9%) 0 60%
+    );
   }
 
   .info-element {
