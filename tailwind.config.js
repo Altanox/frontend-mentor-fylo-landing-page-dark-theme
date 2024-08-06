@@ -16,6 +16,13 @@ module.exports = {
       body: '"Open\\ Sans", sans-serif;',
       accent: '"Raleway", sans-serif;',
     },
+    gradientColorStopPositions: {
+      40: '0 40%',
+      60: '0 60%',
+    },
+    content: {
+      quotes: 'url(./images/bg-quotes.png)',
+    },
   },
   plugins: [],
 };
