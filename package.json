@@ -1,18 +1,18 @@
 {
-  "dependencies": {
-    "tailwindcss": "^3.4.7",
-    "typescript": "^5.5.4"
-  },
-  "name": "fylo-dark-theme-landing-page-master",
-  "description": "![Design preview for the Fylo dark theme landing page challenge](./design/desktop-preview.jpg)",
-  "version": "1.0.0",
-  "main": "index.ts",
-  "license": "ISC",
-  "devDependencies": {
-    "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.5"
-  },
-  "scripts": {
-    "tailwind:dev": "npx tailwindcss -i input.css -o output.css --watch"
-  }
+    "dependencies": {
+        "tailwindcss": "^3.4.7",
+        "typescript": "^5.5.4"
+    },
+    "name": "fylo-dark-theme-landing-page-master",
+    "description": "![Design preview for the Fylo dark theme landing page challenge](./design/desktop-preview.jpg)",
+    "version": "1.0.0",
+    "main": "index.ts",
+    "license": "ISC",
+    "devDependencies": {
+        "prettier": "^3.3.3",
+        "prettier-plugin-tailwindcss": "^0.6.5"
+    },
+    "scripts": {
+        "tailwind:dev": "npx tailwindcss -i input.css -o output.css --watch"
+    }
 }
