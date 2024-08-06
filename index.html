@@ -20,9 +20,27 @@
         <nav class="m-6 flex items-center justify-between font-accent">
             <img class="w-24" src="./images/logo.svg" alt="Fylo logo" />
             <ul class="flex flex-row items-center justify-center gap-6">
-                <li><a class="cursor-pointer text-sm" href="#">Features</a></li>
-                <li><a class="cursor-pointer text-sm" href="#">Team</a></li>
-                <li><a class="cursor-pointer text-sm" href="#">Sign In</a></li>
+                <li>
+                    <a
+                        class="cursor-pointer text-sm outline-none hover:font-semibold hover:underline focus:font-semibold focus:underline"
+                        href="#"
+                        >Features</a
+                    >
+                </li>
+                <li>
+                    <a
+                        class="cursor-pointer text-sm outline-none hover:font-semibold hover:underline focus:font-semibold focus:underline"
+                        href="#"
+                        >Team</a
+                    >
+                </li>
+                <li>
+                    <a
+                        class="cursor-pointer text-sm outline-none hover:font-semibold hover:underline focus:font-semibold focus:underline"
+                        href="#"
+                        >Sign In</a
+                    >
+                </li>
             </ul>
         </nav>
         <section
@@ -43,7 +61,7 @@
                     collaborate with friends family, and co-workers.
                 </p>
                 <button
-                    class="min-h-14 rounded-full bg-gradient-to-r from-accent-cyan to-accent-blue px-12 font-accent text-lg font-semibold text-neutral-white"
+                    class="min-h-14 rounded-full bg-gradient-to-r from-accent-cyan to-accent-blue px-12 font-accent text-lg font-semibold text-neutral-white outline-none hover:to-accent-cyan focus:to-accent-cyan"
                 >
                     Get Started
                 </button>
@@ -138,7 +156,10 @@
                         and colleagues for live collaboration. No email
                         attachments required.
                     </p>
-                    <a href="#" class="self-start border-b text-accent-cyan">
+                    <a
+                        href="#"
+                        class="link-icon self-start border-b text-accent-cyan"
+                    >
                         See how Fylo works
                         <img
                             class="inline w-4"
@@ -231,18 +252,26 @@
                     </p>
                     <form
                         action="post"
-                        class="grid min-w-full grid-cols-1 items-center justify-center gap-8 md:grid-flow-col"
+                        class="grid min-w-full grid-cols-1 items-start justify-center gap-8 md:grid-cols-2"
                     >
-                        <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="email@example.com"
-                            class="min-h-14 min-w-full rounded-full border-none py-4 indent-8 text-sm text-accent-blue outline-none"
-                        />
+                        <div>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="email@example.com"
+                                class="min-h-14 min-w-full rounded-full border-none py-4 indent-8 text-sm text-accent-blue outline-none"
+                            />
+                            <label
+                                id="email-error"
+                                class="invisible text-accent-red"
+                                for="btn-submit"
+                            />
+                        </div>
                         <button
                             type="submit"
-                            class="min-h-14 rounded-full bg-gradient-to-r from-accent-cyan to-accent-blue px-12 font-accent text-lg font-semibold text-neutral-white"
+                            id="btn-submit"
+                            class="min-h-14 rounded-full bg-gradient-to-r from-accent-cyan to-accent-blue px-12 font-accent text-lg font-semibold text-neutral-white outline-none hover:to-accent-cyan focus:to-accent-cyan"
                         >
                             Get Started For Free
                         </button>
@@ -286,15 +315,57 @@
             </section>
             <nav class="flex flex-col gap-14 self-start md:flex-row">
                 <div class="flex flex-col gap-4">
-                    <p><a href="#">About Us</a></p>
-                    <p><a href="#">Jobs</a></p>
-                    <p><a href="#">Press</a></p>
-                    <p><a href="#">Blog</a></p>
+                    <p>
+                        <a
+                            class="outline-none hover:font-bold focus:font-bold"
+                            href="#"
+                            >About Us</a
+                        >
+                    </p>
+                    <p>
+                        <a
+                            class="outline-none hover:font-bold focus:font-bold"
+                            href="#"
+                            >Jobs</a
+                        >
+                    </p>
+                    <p>
+                        <a
+                            class="outline-none hover:font-bold focus:font-bold"
+                            href="#"
+                            >Press</a
+                        >
+                    </p>
+                    <p>
+                        <a
+                            class="outline-none hover:font-bold focus:font-bold"
+                            href="#"
+                            >Blog</a
+                        >
+                    </p>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <p><a href="#">Contact Us</a></p>
-                    <p><a href="#">Terms</a></p>
-                    <p><a href="#">Privacy</a></p>
+                    <p>
+                        <a
+                            class="outline-none hover:font-bold focus:font-bold"
+                            href="#"
+                            >Contact Us</a
+                        >
+                    </p>
+                    <p>
+                        <a
+                            class="outline-none hover:font-bold focus:font-bold"
+                            href="#"
+                            >Terms</a
+                        >
+                    </p>
+                    <p>
+                        <a
+                            class="outline-none hover:font-bold focus:font-bold"
+                            href="#"
+                            >Privacy</a
+                        >
+                    </p>
                 </div>
             </nav>
             <section
@@ -313,5 +384,6 @@
                 /></a>
             </section>
         </div>
+        <script src="index.js"></script>
     </body>
 </html>
